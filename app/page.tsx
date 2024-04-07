@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 
+//NAVBAR
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -9,12 +10,23 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 
+//WEB3
 import { useState } from "react";
 import { ethers } from "ethers";
 import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { AccountContext } from "./context/context";
 import { InfuraProvider } from "ethers";
+
+//CARD
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 function Home() {
   const [account, setAccount] = useState("");
@@ -65,28 +77,40 @@ function Home() {
       <NavigationMenu className="navigation-menu gap-3 lg:gap-4 flex flex-col sm:flex-row mx-auto mt-2">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuLink className="sm:text-l md:text-2xl lg:text-4xl" href="/">
+            <NavigationMenuLink
+              className="sm:text-l md:text-2xl lg:text-4xl"
+              href="/"
+            >
               Home
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuLink className="sm:text-l md:text-2xl lg:text-4xl" href="/">
+            <NavigationMenuLink
+              className="sm:text-l md:text-2xl lg:text-4xl"
+              href="/"
+            >
               Collection
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuLink className="sm:text-l md:text-2xl lg:text-4xl" href="/">
+            <NavigationMenuLink
+              className="sm:text-l md:text-2xl lg:text-4xl"
+              href="/"
+            >
               Community
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuLink className="sm:text-l md:text-2xl lg:text-4xl" href="/">
+            <NavigationMenuLink
+              className="sm:text-l md:text-2xl lg:text-4xl"
+              href="/"
+            >
               About
             </NavigationMenuLink>
           </NavigationMenuItem>
@@ -104,7 +128,11 @@ function Home() {
       <hr className="mt-4" />
       <div className="title mt-10 font-extrabold text-5xl text-center">Hi!</div>
       {account ? (
-        <div className="title text-md text-center">{account}</div>
+        <div className="title text-3xl text-center">
+          {`${account.substring(0, 5)}..${account.substring(
+            account.length - 3
+          )}`}
+        </div>
       ) : (
         <div className="title text-3xl text-center">guest</div>
       )}
@@ -112,9 +140,76 @@ function Home() {
       <hr className="mt-10" />
 
       <div id="collection" className="p-10 bg-black">
-        <h2 className="text-center font-bold text-white text-md md:text-3xl">Our Collection</h2>
+        <h2 className="text-center font-bold text-white text-md md:text-3xl">
+          Our Collection
+        </h2>
+      </div>
 
-        
+      <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+        <div>
+          <Card className="mx-3">
+            <CardHeader>
+              <CardTitle className="text-md">Collection 1</CardTitle>
+              <CardDescription>Rare collection #6857</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <img
+                src="https://avatars.githubusercontent.com/u/91598145?v=4"
+                alt="collection 1"
+              />
+            </CardContent>
+          </Card>
+        </div>
+        <div>
+          <Card className="mx-3">
+            <CardHeader>
+              <CardTitle className="text-md">Collection 2</CardTitle>
+              <CardDescription>Rare collection #2352</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <img
+                src="https://avatars.githubusercontent.com/u/91598145?v=4"
+                alt="collection 1"
+              />
+            </CardContent>
+          </Card>
+        </div>
+        <div>
+          <Card className="mx-3">
+            <CardHeader>
+              <CardTitle className="text-md">Collection 3</CardTitle>
+              <CardDescription>Rare collection #2452</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <img
+                src="https://avatars.githubusercontent.com/u/91598145?v=4"
+                alt="collection 1"
+              />
+            </CardContent>
+          </Card>
+        </div>
+        <div>
+          <Card className="mx-3">
+            <CardHeader>
+              <CardTitle className="text-md">Collection 4</CardTitle>
+              <CardDescription>Rare collection #3573</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <img
+                src="https://avatars.githubusercontent.com/u/91598145?v=4"
+                alt="collection 1"
+              />
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
+      <hr className="mt-10" />
+
+      <div id="community" className="p-10 bg-black">
+        <h2 className="text-center font-bold text-white text-md md:text-3xl">
+          Community
+        </h2>
       </div>
     </div>
   );
