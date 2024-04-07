@@ -58,35 +58,35 @@ function Home() {
   }
 
   return (
-    <div className="container font-mono pr-0 pl-0">
-      <div className="text-center text-3xl font-bold sm:text-left bg-black text-white pt-4 pb-4 sm:pl-4 sm:mt-2 sm:mx-3 sm:rounded-xl ">
+    <div className="font-mono pr-0 pl-0">
+      <div className="text-center text-3xl font-bold sm:text-left bg-black text-white pt-4 pb-4 sm:pl-4 sm:mt-2 sm:mx-3 sm:rounded-xl">
         HG DAPP
       </div>
-      <NavigationMenu className="navigation-menu gap-3 flex flex-col sm:flex-row mx-auto mt-2">
+      <NavigationMenu className="navigation-menu gap-3 lg:gap-4 flex flex-col sm:flex-row mx-auto mt-2">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuLink className="sm:text-3xl" href="/">
+            <NavigationMenuLink className="sm:text-l md:text-2xl lg:text-4xl" href="/">
               Home
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuLink className="sm:text-3xl" href="/">
-              Store
+            <NavigationMenuLink className="sm:text-l md:text-2xl lg:text-4xl" href="/">
+              Collection
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuLink className="sm:text-3xl" href="/">
+            <NavigationMenuLink className="sm:text-l md:text-2xl lg:text-4xl" href="/">
               Community
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuLink className="sm:text-3xl" href="/">
+            <NavigationMenuLink className="sm:text-l md:text-2xl lg:text-4xl" href="/">
               About
             </NavigationMenuLink>
           </NavigationMenuItem>
@@ -101,12 +101,21 @@ function Home() {
         </NavigationMenuList>
       </NavigationMenu>
 
+      <hr className="mt-4" />
       <div className="title mt-10 font-extrabold text-5xl text-center">Hi!</div>
       {account ? (
         <div className="title text-md text-center">{account}</div>
       ) : (
-        <div className="title text-md text-center">guest</div>
+        <div className="title text-3xl text-center">guest</div>
       )}
+
+      <hr className="mt-10" />
+
+      <div id="collection" className="p-10 bg-black">
+        <h2 className="text-center font-bold text-white text-md md:text-3xl">Our Collection</h2>
+
+        
+      </div>
     </div>
   );
 }
