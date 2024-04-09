@@ -90,7 +90,7 @@ function Home() {
           <NavigationMenuItem>
             <NavigationMenuLink
               className="sm:text-l md:text-2xl lg:text-4xl"
-              href="/"
+              href="#collection"
             >
               Collection
             </NavigationMenuLink>
@@ -100,7 +100,7 @@ function Home() {
           <NavigationMenuItem>
             <NavigationMenuLink
               className="sm:text-l md:text-2xl lg:text-4xl"
-              href="/"
+              href="#community"
             >
               Community
             </NavigationMenuLink>
@@ -110,7 +110,7 @@ function Home() {
           <NavigationMenuItem>
             <NavigationMenuLink
               className="sm:text-l md:text-2xl lg:text-4xl"
-              href="/"
+              href="#about"
             >
               About
             </NavigationMenuLink>
@@ -283,7 +283,7 @@ function Home() {
 
       {/* ABOUT CONTENT*/}
       <div className="mt-10">
-        <div id="about" className="pl-7 md:pl-32 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">WHAT IS HG DAPP ACTUALLY?</div>
+        <div className="pl-7 md:pl-32 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">WHAT IS HG DAPP ACTUALLY?</div>
         <div id="aboutTextWrapper" className="px-7 md:px-32">
           <p className="text-justify border border-black px-4 rounded-lg">
             A decentralized application (DApp) is a software application that
@@ -308,7 +308,7 @@ function Home() {
       </div>
 
       {/* FOOTER */}
-      
+      <footer className="mt-10 bg-black text-white p-3 text-xs text-center sm:text-sm md:text-lg lg:text-xl">hg's content - follow me on instagram @afrinataaa</footer>
     </div>
   );
 }
