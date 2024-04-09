@@ -232,7 +232,9 @@ function Home() {
 
       {/* COMMUNITY PLATFORM */}
       <div className="mt-10 mx-10 sm:mx-32 md:mx-52 lg:mx-96">
-        <span className="font-bold">Our platform</span>
+        <span className=" font-bold sm:text-xl md:text-2xl lg:text-3xl">
+          Our platform
+        </span>
         <div className="border border-black rounded-lg grid grid-cols-3 py-3">
           <Link className="mx-auto" href="#link1">
             <svg
@@ -278,6 +280,35 @@ function Home() {
           About
         </h2>
       </div>
+
+      {/* ABOUT CONTENT*/}
+      <div className="mt-10">
+        <div id="about" className="pl-7 md:pl-32 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">WHAT IS HG DAPP ACTUALLY?</div>
+        <div id="aboutTextWrapper" className="px-7 md:px-32">
+          <p className="text-justify border border-black px-4 rounded-lg">
+            A decentralized application (DApp) is a software application that
+            operates on a decentralized network, leveraging blockchain or other
+            distributed ledger technologies to function without a central
+            authority. Unlike traditional applications where data and control
+            are housed in a centralized server or entity, DApps distribute these
+            functions across a network of nodes, ensuring transparency,
+            security, and censorship resistance. Smart contracts, which are
+            self-executing contracts with the terms of the agreement directly
+            written into code, often power DApps, enabling automated and
+            trustless transactions. Decentralized applications have gained
+            popularity due to their potential to eliminate intermediaries,
+            increase user privacy, and create more resilient systems that are
+            less prone to censorship or single points of failure. They find
+            application in various fields such as finance, supply chain
+            management, social media, gaming, and more, promising to
+            revolutionize industries by providing decentralized alternatives to
+            traditional centralized systems.
+          </p>
+        </div>
+      </div>
+
+      {/* FOOTER */}
+      
     </div>
   );
 }
